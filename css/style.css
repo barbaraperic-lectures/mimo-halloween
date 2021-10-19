@@ -1,0 +1,49 @@
+@import url(./components/cards.css);
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  background: linear-gradient(180deg, #7b7b7b, white);
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+h2 {
+  text-shadow: 0 0 black;
+}
+
+section {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 0 auto;
+  width: 90%;
+  /* position: relative; */
+}
+
+.halloween-illustration {
+  /* position: absolute; */
+  right: -53px;
+  top: 42px;
+  height: 300px;
+}
+
+#spider {
+  animation: dance 1s infinite alternate;
+}
+@keyframes dance {
+  100% {
+    transform: rotate(2deg);
+  }
+}

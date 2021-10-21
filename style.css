@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #7b7b7b, white);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  --spacing: 16px;
+}
+
+header {
+  padding: 20px 16px;
+  font-size: var(--spacing)
+}
+
+/* 1rem = 16px */
+
+header h1 {
+  font-size: 2rem;
+  color: orange;
+  text-shadow: 1px 1px #eb6123;
+  text-align: center;
+  animation: slide-in 2000ms;
+  animation-delay: 1000ms;
+  /* animation-iteration-count: infinite; */
+}
+
+section.sidebar {
+  /* write below */
+  display: none;
+}
+
+section.card-content {
+  margin-bottom: 30px;
+}
+
+aside {
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px 24px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 250ms;
+}
+
+aside:hover {
+  transform: scale(2);
+}
+
+aside ul > li {
+  margin-bottom: 8px;
+}
+
+.card {
+  max-width: 400px;
+  background-color: white;
+  padding: 16px 24px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: var(--spacing);
+  transition: transform 250ms;
+ }
+
+ .card:hover {
+  transform: translateX(-10px);
+ }
+
+ /* translate, rotate, scale */
+
+ .card span {
+   color: #eb6123;
+ }
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing);
+}
+
+#spider {
+  animation: dance 1s infinite alternate;
+}
+
+
+/* RESPONSIVENESS */
+
+
+@media (min-width: 950px) {
+  section.sidebar {
+    display: revert;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main {
+    justify-content: space-between;
+    --spacing: 24px;
+  }
+
+  .card-container {
+    gap: var(--spacing);
+  }
+
+  .card {
+    border-radius: var(--spacing);
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes dance {
+  100% {
+    transform: rotate(2deg);
+  }
+}
